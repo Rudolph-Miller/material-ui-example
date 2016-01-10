@@ -1,14 +1,18 @@
 import { render } from 'react-dom';
 import React, { Component, PropTypes } from 'react';
+import Theme from './theme';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 import {
   Avatar, Card, CardActions,
   CardHeader, CardMedia, CardTitle,
-  RaisedButton, FlatButton, CardText
+  RaisedButton, FlatButton, CardText,
+  ThemeWrapper
 } from 'material-ui';
+import ThemeDecorator from 'material-ui/lib/styles/theme-decorator';
 
+@ThemeDecorator(Theme)
 class App extends Component {
   render() {
     return (

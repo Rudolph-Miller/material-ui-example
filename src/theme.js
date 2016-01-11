@@ -5,7 +5,10 @@ import ColorManipulator from 'material-ui/lib/utils/color-manipulator';
 import LightRawTheme from 'material-ui/lib/styles/raw-themes/light-raw-theme';
 
 export default ThemeManager.modifyRawThemePalette(
-  ThemeManager.getMuiTheme(LightRawTheme),
+  ThemeManager.modifyRawThemeFontFamily(
+    ThemeManager.getMuiTheme(LightRawTheme),
+    "'Roboto', 'Noto Sans JP', sans-serif"
+  ),
   {
     primary1Color: Colors.cyan500,
     primary2Color: Colors.cyan700,
